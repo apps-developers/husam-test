@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import styled from "styled-components";
+import Title from "./components/Title";
+import { data, data2 } from "./data";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {data.map((d) => {
+        return (
+          <div style={{ margin: 100 }}>
+            <Title name={d.name} color={d.color} />
+            <Title name={d.name} color={d.color} />
+            <Title name={d.name} color={d.color} />
+          </div>
+        );
+      })}
+
+      {data2.map((d) => {
+        return (
+          <div style={{ margin: 100 }}>
+            <Title name={d.name} color={d.color} />
+            <Title name={d.name} color={d.color} />
+            <Title name={d.name} color={d.color} />
+          </div>
+        );
+      })}
     </div>
   );
 }
